@@ -1,0 +1,46 @@
+/* index.css */
+
+/* Elimina márgenes y rellenos por defecto del body y html */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%; /* Asegura que el cuerpo ocupe toda la altura */
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column; /* Cambia la dirección a columna para que el título esté encima del formulario */
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Asegura que el contenedor ocupe toda la altura de la ventana */
+  position: relative; /* Necesario para posicionar el video */
+  overflow: hidden; /* Oculta el desbordamiento */
+  width: 100vw; /* Asegura que el contenedor ocupe toda la anchura de la ventana */
+}
+
+.video-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Esto asegura que el video cubra toda el área */
+  z-index: -1; /* Coloca el video detrás del contenido */
+}
+
+.form-title {
+  text-align: center; /* Centra el texto del título */
+  margin-bottom: 20px; /* Espacio entre el título y el formulario */
+  color: rgb(255, 255, 255); /* Cambia el color del texto del título a blanco para mayor visibilidad */
+  z-index: 1; /* Asegúrate de que esté por encima del video */
+}
+
+.form-container {
+  width: 400px; /* Ajusta el ancho del formulario */
+  background-color: #8b9ae4f1; /* Color marrón claro para el fondo del formulario */
+  color: black; /* Cambia el color del texto a negro para contraste */
+  padding: 16px; /* Espaciado interno */
+  border-radius: 8px; /* Esquinas redondeadas */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para dar profundidad */
+  z-index: 1; /* Asegúrate de que esté por encima del video */
+}
